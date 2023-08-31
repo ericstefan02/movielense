@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+:root {
+  --mainColor: #171518ef;
+  --fontColor: #c7ccce;
+  --hoverColor: ;
+  --ljubicasta: rgb(135, 57, 249);
+  --roze: #c651cd;
+  --siva: #363636;
+  --tamnija: #1b1b1b;
+  --navColor: #000000eb;
+  --bgColor: #100f10;
+}
+#logoDiv {
+  width: 75px;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Quicksand", sans-serif;
+  color: var(--fontColor);
+  /* text-shadow: 0 0 5px red; */
+  background: var(--bgColor);
+}
+#navbar {
+  background-color: var(--navColor);
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+}
+i {
+  color: #8739f9 !important;
+}
+#navbar div span {
+  color: var(--fontColor);
+}
+#navbar ul li a {
+  border-radius: 20px;
+  color: var(--fontColor);
+}
+#navbar ul li a:hover {
+  background-color: var(--tamnija);
+}
+#vertical {
+  margin-top: 12px;
+}
+#search {
+  width: 300px;
+  border: none;
+}
+#search:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.carousel-item img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-md-8 {
+    width: 100%;
+  }
+}
+
+.input-group-text {
+  background-color: var(--tamnija);
+  border: none;
+}
+.search-icon {
+  font-size: 1.2rem;
+  color: var(--fontColor);
+}
+#footer {
+  background-color: var(--mainColor);
+}
+#copyrightDiv {
+  border-top: 2px solid var(--roze);
+}
+#socialMedia a {
+  border-radius: 10px;
+  color: var(--fontColor);
+}
+#socialMedia a:hover {
+  background-color: var(--tamnija);
+  transition: 0.2s;
+}
+#links a {
+  border-radius: 10px;
+  color: var(--fontColor);
+  text-decoration: none;
+}
+#links a:hover {
+  color: var(--ljubicasta);
+  transition: 0.2s;
+}
+#arrow {
+  margin-right: 10px;
+}
+#slideLeft,
+#slideRight {
+  border-radius: 20px;
+  padding: 0px 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#slideLeft {
+  margin-right: -45px;
+}
+#slideRight {
+  margin-left: -45px;
+}
+.seeMoreLink {
+  border: 1px solid var(--tamnija);
+  background-color: var(--mainColor);
+  color: var(--roze);
+  text-decoration: none;
+}
+.seeMoreLink:hover {
+  border: 1px solid var(--roze);
+}
+.watchlistLink {
+  border: 1px solid var(--tamnija);
+  background-color: var(--mainColor);
+  color: var(--fontColor);
+  text-decoration: none;
+}
+@media (max-width: 650px) {
+  #search{
+    width: 200px;
+  }
+}
+@media(max-width: 992px){
+  #vertical{
+    display: none;
+  }
+}
+.watchlistLink:hover {
+  border: 1px solid var(--roze);
+}
+.info:hover {
+  color: var(--ljubicasta);
+  transition: 0.1s;
+}
+
+.movieInfoNew {
+  background-image: linear-gradient(to right, #000, #100f10);
+}
+.movieInfo {
+  background-color: var(--navColor);
+}
+
+#mainMovie {
+  z-index: -1;
+  position: relative;
+}
+.ico {
+  color: var(--ljubicasta);
+}
+.icoSecondary {
+  color: var(--roze);
+}
+#mainMovie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+#sliderText {
+  margin-top: -70px;
+}
+.sectionHeader {
+  display: inline-block;
+  border-bottom: 2px solid var(--ljubicasta);
+}
+#logIn {
+  color: var(--bgColor);
+  border: 1px solid var(--ljubicasta);
+  background-color: var(--ljubicasta);
+}
+#logIn:hover {
+  border: 1px solid var(--ljubicasta);
+  color: var(--ljubicasta);
+  transition: 0.2s;
+  background-color: var(--bgColor);
+}
+.commingMovies {
+  background-color: var(--bgColor);
+}
+.movieTerm {
+  background-color: var(--ljubicasta);
+  color: var(--bgColor);
+  padding: 5px;
+  border-radius: 5px;
+}
+.similarMovie {
+  border: 2px solid var(--ljubicasta);
+}
+.similarMovie:hover {
+  border: 3px solid var(--roze);
+}
+.comment {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #8739f9, #c651cd) 1;
+  background-color: var(--mainColor);
+  padding: 10px;
+}
+#allComents {
+  height: 300px;
+  overflow: auto;
+}
+
+/* The following CSS will style the scrollbar for Firefox */
+#allComents {
+  scrollbar-width: thin;
+  scrollbar-color: var(--navColor) var(--tamnija);
+}
+
+#allComents::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--tamnija);
+}
+
+#allComents::-webkit-scrollbar-thumb {
+  background-color: var(--navColor);
+}
+#commentLogin, #commentLoginButton,
+#signUpNow {
+  color: var(--roze);
+  display: inline-block;
+  position: relative;
+}
+
+#commentLogin::before, #commentLoginButton::before, 
+#signUpNow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--ljubicasta), var(--roze));
+  transition: width 0.5s ease-in-out;
+}
+
+#commentLogin:hover::before, #commentLoginButton:hover::before,
+#signUpNow:hover::before {
+  width: 100%;
+}
+
+#formDiv {
+  background-color: var(--navColor);
+}
+.inputForForm {
+  background-color: var(--tamnija);
+  border: none;
+  color: var(--fontColor);
+}
+.inputForForm:focus {
+  background-color: var(--tamnija);
+  color: var(--fontColor);
+  box-shadow: 0 0 0 0.2rem rgba(135, 57, 249, 0.25);
+  border-color: var(--ljubicasta);
+  outline: 0;
+}
+.inputForForm::placeholder{
+  color: var(--fontColor);
+}
+#submitButton {
+  background-image: linear-gradient(to right, var(--ljubicasta), var(--roze));
+  color: var(--tamnija);
+}
+#formDiv {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#loginBody {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/too.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#loginBody::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+  filter: brightness(0.7);
+}
+#cnt {
+  position: relative;
+  z-index: 1;
+}
+.slider-transition {
+  transition: all 0.5s ease;
+}
+td {
+  max-width: 150px; /* or adjust as needed */
+  vertical-align: middle;
+}
+.insertButton{
+  background-color: var(--ljubicasta);
+  color: #000;
+  border-radius: 15px;
+}
+.insertButton:hover{
+  background-color: var(--roze);
+  color: #000;
+
+}
+#searchedMovieInfo {
+  position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--navColor);
+}
+.paginationLink{
+  background-color: var(--tamnija);
+  padding: 5px 10px;
+  color: var(--ljubicasta);
+  border: 1px solid var(--ljubicasta);
+}
+.paginationLink:hover{
+  background-color: var(--ljubicasta);
+  color: #000;
+  transition: 0.4s;
+}
+.active p{  
+  background-color: var(--ljubicasta);
+  color: #000;
+}
+@media(min-width: 768px){
+  .movieDiv{
+    box-shadow: 0 0 15px rgba(34, 3, 81, 0.9);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .movieDiv:hover {
+    box-shadow: 0 0 25px rgba(34, 3, 81, 0.95);
+  }
+}
+
